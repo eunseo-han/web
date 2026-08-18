@@ -1,300 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Activity | Eun-Seo Han</title>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    :root { --primary-color: #2563eb; --text-main: #1e293b; --text-muted: #64748b; --bg-color: #ffffff; --border-color: #e2e8f0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Pretendard', sans-serif; color: var(--text-main); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; transition: 0.2s; }
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      color: #222;
-      background: white;
-      line-height: 1.7;
-    }
+    nav { position: sticky; top: 0; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
+    .nav-container { max-width: 1100px; margin: 0 auto; padding: 16px 25px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-name { font-weight: 700; font-size: 1.1rem; }
+    .nav-right { display: flex; gap: 35px; align-items: center; }
+    .nav-links { display: flex; gap: 28px; font-size: 0.95rem; font-weight: 500; color: var(--text-muted); }
+    .nav-links a:hover, .nav-links .active { color: var(--primary-color); }
+    .social-icons { display: flex; gap: 18px; font-size: 1.1rem; color: var(--text-muted); }
+    .social-icons a:hover { color: var(--primary-color); transform: translateY(-2px); }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    .page-container { max-width: 900px; margin: 80px auto; padding: 0 25px; min-height: 60vh; }
+    .page-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 50px; }
 
-    nav {
-      border-bottom: 1px solid #e6e6e6;
-      background: white;
-    }
+    .activity-section { margin-bottom: 50px; }
+    .activity-section h2 { font-size: 1.5rem; font-weight: 700; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
+    
+    .activity-item { display: flex; gap: 20px; margin-bottom: 15px; }
+    .activity-date { width: 100px; font-weight: 600; color: var(--primary-color); font-size: 0.95rem; flex-shrink: 0; }
+    .activity-desc { font-size: 1rem; color: var(--text-main); }
 
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-name {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      color: #333;
-    }
-
-    .nav-links a:hover,
-    .nav-links .active {
-      color: #24557a;
-    }
-
-    .nav-links .active {
-      font-weight: 600;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .social-icons a {
-      font-size: 18px;
-      color: #444;
-    }
-
-    .social-icons a:hover {
-      color: #24557a;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 90px 25px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      letter-spacing: -1px;
-    }
-
-    .page-description {
-      color: #666;
-      margin-bottom: 50px;
-    }
-
-    .activity-section {
-      margin-bottom: 60px;
-    }
-
-    .activity-section h2 {
-      font-size: 23px;
-      margin-bottom: 20px;
-    }
-
-    .activity-item {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 30px;
-      padding: 22px 0;
-      border-bottom: 1px solid #e6e6e6;
-    }
-
-    .activity-date {
-      color: #777;
-      font-size: 14px;
-    }
-
-    .activity-title {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .activity-description {
-      margin-top: 4px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    @media (max-width: 750px) {
-      .nav-links {
-        display: none;
-      }
-
-      .activity-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
+    @media (max-width: 768px) { 
+      .nav-links { display: none; } 
+      .activity-item { flex-direction: column; gap: 5px; }
+      .activity-date { width: auto; }
     }
   </style>
 </head>
-
 <body>
 
-<nav>
-  <div class="nav-container">
-
-    <a href="index.html" class="nav-name">Eun-Seo Han</a>
-
-    <div class="nav-right">
-
-      <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="activity.html" class="active">Activity</a>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-name">Eun-Seo Han</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="publications.html">Publications</a>
+          <a href="projects.html">Projects</a>
+          <a href="activity.html" class="active">Activity</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="YOUR_LINKEDIN_URL" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:sylvia6629@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
       </div>
-
-      <div class="social-icons">
-        <a href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank" title="Google Scholar">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </a>
-
-        <a href="YOUR_LINKEDIN_URL" target="_blank" title="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="mailto:YOUR_EMAIL@gmail.com" title="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
-
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main>
+  <main class="page-container">
+    <h1 class="page-title">Activity</h1>
 
-  <h1>Activity</h1>
-
-  <p class="page-description">
-    Academic, professional, and international activities related to
-    transportation research and planning.
-  </p>
-
-
-  <div class="activity-section">
-
-    <h2>Professional Experience</h2>
-
-    <div class="activity-item">
-
-      <div class="activity-date">
-        2025 – Present
+    <div class="activity-section">
+      <h2>Conferences & Presentations</h2>
+      
+      <div class="activity-item">
+        <div class="activity-date">Oct 2024</div>
+        <div class="activity-desc">Oral Presentation at the Korean Society of Transportation (KST) Autumn Conference</div>
       </div>
-
-      <div>
-        <div class="activity-title">
-          Researcher, The Seoul Institute
-        </div>
-
-        <div class="activity-description">
-          Smart Transportation Research Division
-        </div>
+      
+      <div class="activity-item">
+        <div class="activity-date">May 2023</div>
+        <div class="activity-desc">Poster Presentation at the International Conference on Urban Planning</div>
       </div>
-
     </div>
 
-
-    <div class="activity-item">
-
-      <div class="activity-date">
-        2022 – 2024
+    <div class="activity-section">
+      <h2>Certifications & Skills</h2>
+      
+      <div class="activity-item">
+        <div class="activity-date">Skills</div>
+        <div class="activity-desc">R, QGIS, Spatial Data Analysis, Multi-Criteria Decision-Making (AHP, DEA)</div>
       </div>
-
-      <div>
-        <div class="activity-title">
-          Researcher, Smart Transportation Laboratory
-        </div>
-
-        <div class="activity-description">
-          Myongji University
-        </div>
-      </div>
-
     </div>
 
-  </div>
-
-
-  <div class="activity-section">
-
-    <h2>International & Research Activities</h2>
-
-    <div class="activity-item">
-
-      <div class="activity-date">
-        2025
-      </div>
-
-      <div>
-        <div class="activity-title">
-          Sustainable Urban Transport Project in Bishkek, Kyrgyzstan
-        </div>
-
-        <div class="activity-description">
-          Participated in the development of sustainable urban transport
-          strategies and long-term mobility planning.
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="activity-section">
-
-    <h2>Conference & Academic Activities</h2>
-
-    <div class="activity-item">
-
-      <div class="activity-date">
-        YYYY
-      </div>
-
-      <div>
-        <div class="activity-title">
-          Conference Presentation Title
-        </div>
-
-        <div class="activity-description">
-          Conference name · Location
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</main>
+  </main>
 
 </body>
 </html>
