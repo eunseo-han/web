@@ -18,6 +18,7 @@
       --bg-color: #ffffff; 
       --bg-light: #f8fafc;
       --border-color: #e2e8f0; 
+      --badge-color: #4f46e5; /* 인덱스용 살짝 짙은 보라빛 블루 */
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,8 +52,31 @@
     ========================= */
     .pub-year { font-size: 1.2rem; font-weight: 700; color: var(--text-muted); margin: 30px 0 15px; }
     
-    .pub-item { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--border-color); }
+    /* 리스트 아이템 레이아웃 (Flexbox 사용) */
+    .pub-item { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 25px; 
+    }
     
+    /* [SCI] [KCI] 배지 디자인 */
+    .pub-badge {
+      font-family: 'Consolas', 'Courier New', monospace; 
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--badge-color);
+      flex-shrink: 0;
+      width: 55px; 
+      margin-top: 1px; 
+    }
+
+    /* 본문 영역 */
+    .pub-content {
+      display: flex;
+      flex-direction: column;
+    }
+
     /* 제목에 링크 호버 효과 추가 */
     .pub-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; line-height: 1.4; }
     .pub-title a { color: var(--primary-color); text-decoration: none; }
@@ -62,7 +86,7 @@
     .pub-journal { font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
 
     /* =========================
-       CONFERENCE PROCEEDINGS (이미지 + 텍스트)
+       CONFERENCE PROCEEDINGS 
     ========================= */
     .conf-item { 
       display: flex; 
@@ -77,7 +101,6 @@
     
     .conf-item:hover { background: var(--bg-light); }
     
-    /* 썸네일 이미지 영역 */
     .conf-thumb { 
       width: 140px; 
       height: auto; 
@@ -101,6 +124,7 @@
       .page-title { font-size: 2.2rem; }
       .conf-item { flex-direction: column; gap: 15px; }
       .conf-thumb { width: 120px; }
+      .pub-badge { width: 45px; font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -135,40 +159,55 @@
 
     <div class="pub-year">2026</div>
     <div class="pub-item">
-      <div class="pub-title"><a href="https://doi.org/10.1080/12265934.2026.2636022" target="_blank">
-        Evaluating transfer efficiency between public transportation and bike sharing for Mobility as a Service (MaaS)</a></div>
-      <div class="pub-authors"><b>Han, E.-S.</b>, Lee, E.-H., & Park, H.-C.</div>
-      <div class="pub-journal">International Journal of Urban Sciences, 1–24.</div>
+      <div class="pub-badge">[SCI]</div>
+      <div class="pub-content">
+        <div class="pub-title"><a href="https://doi.org/10.1080/12265934.2026.2636022" target="_blank">
+          Evaluating transfer efficiency between public transportation and bike sharing for Mobility as a Service (MaaS)</a></div>
+        <div class="pub-authors"><b>Han, E.-S.</b>, Lee, E.-H., & Park, H.-C.</div>
+        <div class="pub-journal">International Journal of Urban Sciences, 1–24.</div>
+      </div>
     </div>
 
     <div class="pub-year">2025</div>
     <div class="pub-item">
-      <div class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5126046" target="_blank">
-        A Data-driven Approach to Route Choice in Urban Railway Networks based on Gamma Distribution: A Case Study of the Seoul Metropolitan Area</a></div>
-      <div class="pub-authors">Kim, K.-M., Jeon, J.-W., <b>Han, E.-S.</b>, & Park, H.-C.</div>
-      <div class="pub-journal">Transport (Accepted).</div>
+      <div class="pub-badge">[SCI]</div>
+      <div class="pub-content">
+        <div class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5126046" target="_blank">
+          A Data-driven Approach to Route Choice in Urban Railway Networks based on Gamma Distribution: A Case Study of the Seoul Metropolitan Area</a></div>
+        <div class="pub-authors">Kim, K.-M., Jeon, J.-W., <b>Han, E.-S.</b>, & Park, H.-C.</div>
+        <div class="pub-journal">Transport (Accepted).</div>
+      </div>
     </div>
     
     <div class="pub-item">
-      <div class="pub-title"><a href="https://www.jkst.or.kr/articles/article/zdJM/" target="_blank">
-        Evaluation of Urban Rail Transfer Efficiency considering Intermodal Connectivity</a></div>
-      <div class="pub-authors"><b>Han, E.-S.</b>, & Park, H.-C.</div>
-      <div class="pub-journal">Journal of the Korean Society of Transportation, 41(7), 771–778.</div>
+      <div class="pub-badge">[KCI]</div>
+      <div class="pub-content">
+        <div class="pub-title"><a href="https://www.jkst.or.kr/articles/article/zdJM/" target="_blank">
+          Evaluation of Urban Rail Transfer Efficiency considering Intermodal Connectivity</a></div>
+        <div class="pub-authors"><b>Han, E.-S.</b>, & Park, H.-C.</div>
+        <div class="pub-journal">Journal of the Korean Society of Transportation, 41(7), 771–778.</div>
+      </div>
     </div>
 
     <div class="pub-year">2024</div>
     <div class="pub-item">
-      <div class="pub-title"><a href="https://doi.org/10.1177/03611981231225641" target="_blank">
-        Modeling Urban Railway Passengers’ Willingness to Wait based on Latent Class Analysis</a></div>
-      <div class="pub-authors">3.	Lee, H.-S., Kwak, H.-C., <b>Han, E.-S.</b>, & Park, H.-C.</div>
-      <div class="pub-journal">Transportation Research Record, 2678(9), 230–240.</div>
+      <div class="pub-badge">[SCI]</div>
+      <div class="pub-content">
+        <div class="pub-title"><a href="https://doi.org/10.1177/03611981231225641" target="_blank">
+          Modeling Urban Railway Passengers’ Willingness to Wait based on Latent Class Analysis</a></div>
+        <div class="pub-authors">Lee, H.-S., Kwak, H.-C., <b>Han, E.-S.</b>, & Park, H.-C.</div>
+        <div class="pub-journal">Transportation Research Record, 2678(9), 230–240.</div>
+      </div>
     </div>
     
     <div class="pub-item">
-      <div class="pub-title"><a href="10.22940/TSR.2024.43.1.71" target="_blank">
-        Applicability of Highway Entrance Ramp Influence Area using Surrogate Safety Measures based on NGSIM Data</a></div>
-      <div class="pub-authors"><b>Han, E.-S.</b>, & Park, H.-C.</div>
-      <div class="pub-journal">Traffic Safety Research, 43(1), 71–89.</div>
+      <div class="pub-badge">[KCI]</div>
+      <div class="pub-content">
+        <div class="pub-title"><a href="https://doi.org/10.22940/TSR.2024.43.1.71" target="_blank">
+          Applicability of Highway Entrance Ramp Influence Area using Surrogate Safety Measures based on NGSIM Data</a></div>
+        <div class="pub-authors"><b>Han, E.-S.</b>, & Park, H.-C.</div>
+        <div class="pub-journal">Traffic Safety Research, 43(1), 71–89.</div>
+      </div>
     </div>
 
 
@@ -177,9 +216,8 @@
     ========================= -->
     <h2 class="section-header">Conference Proceedings</h2>
 
-    <!-- 첫 번째 학회 자료 (국제) -->
+    <!-- 첫 번째 학회 자료 -->
     <div class="conf-item">
-      <!-- 썸네일 이미지 경로 설정 -->
       <img src="images/poster_thumb1.jpg" alt="Poster Thumbnail" class="conf-thumb">
       
       <div class="conf-details">
@@ -189,9 +227,8 @@
       </div>
     </div>
 
-    <!-- 두 번째 학회 자료 (국내 / 수상 내역 포함) -->
+    <!-- 두 번째 학회 자료 -->
     <div class="conf-item">
-      <!-- 썸네일 이미지 경로 설정 -->
       <img src="images/poster_thumb2.jpg" alt="Presentation Thumbnail" class="conf-thumb">
       
       <div class="conf-details">
@@ -199,7 +236,6 @@
         <div class="conf-authors"><b>Han, E.-S.</b>, & Park, H.-C.</div>
         <div class="conf-venue">Korea Institute of ITS Spring Conference 2025</div>
         
-        <!-- 수상 내역이 있을 경우 강조 태그 -->
         <div><span class="conf-award"><i class="fa-solid fa-trophy"></i> Best Paper Award</span></div>
       </div>
     </div>
