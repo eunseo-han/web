@@ -241,7 +241,7 @@
     .project-item {
       display: grid;
 
-      grid-template-columns: 330px 1fr;
+      grid-template-columns: 380px 1fr;
 
       gap: 40px;
 
@@ -267,7 +267,7 @@
 
     .project-image-box {
       width: 100%;
-      height: 230px;
+      height: 260px;
 
       display: flex;
       align-items: center;
@@ -336,7 +336,15 @@
 
       line-height: 1.4;
     }
-
+    
+    .item-title-ko {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: -2px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
 
     .item-role {
       font-size: 0.95rem;
@@ -370,8 +378,11 @@
 
 
       .page-container {
-        margin-top: 40px;
-      }
+  max-width: 1050px;
+  margin: 60px auto 80px;
+  padding: 0 25px;
+  min-height: 60vh;
+}
 
 
       .page-title {
@@ -542,44 +553,18 @@
       <!-- CONTENT -->
 
       <div class="project-content">
-
-
-        <div class="item-date">
-          Jun 2025 – Present
-        </div>
-
-
-        <div class="item-title">
-          Feasibility Reassessment and Comprehensive Development Strategy for the Seoul Urban Railway Network Plan
-        </div>
-
-
-        <div class="item-role">
-          Researcher · The Seoul Institute
-        </div>
-
-
+        <div class="item-date"> Jun 2025 – Present</div>
+        <div class="item-title"> Feasibility Reassessment and Comprehensive Development Strategy for the Seoul Urban Railway Network Plan</div>
+        <div class="item-title-ko"> [서울시 도시철도망 구축계획 타당성 재검토 및 종합발전방안]</div>
+        <div class="item-role"> Researcher · The Seoul Institute </div>
         <div class="item-desc">
           Conducting comprehensive reassessment and strategic planning
           for the future urban rail network in Seoul, analyzing
-          feasibility and transportation impacts.
-        </div>
-
-
+          feasibility and transportation impacts.</div>
       </div>
-
     </div>
 
-
-
-    <!-- =========================
-         PROJECT 2
-         BISHKEK
-    ========================= -->
-
     <div class="project-item">
-
-
       <!-- IMAGE -->
 
       <div class="project-image-box">
@@ -588,14 +573,7 @@
           src="images/project_bishkek.jpg"
           alt="Sustainable Urban Transport System in Bishkek"
           class="project-image"
-        >
-
-      </div>
-
-
-
-      <!-- CONTENT -->
-
+        >    </div>
       <div class="project-content">
 
 
