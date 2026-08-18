@@ -113,11 +113,30 @@
       transform: translateY(-2px); /* 마우스 호버 시 살짝 위로 올라가는 효과 */
     }
 
-    .cv-link {
-  font-size: 0.9rem !important;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-    }
+   .cv-link {
+  width: 26px;
+  height: 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--text-muted);
+  color: white !important;
+
+  border-radius: 3px;
+
+  font-size: 0.7rem !important;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.cv-link:hover {
+  background: var(--primary-color);
+  color: white !important;
+  transform: translateY(-2px);
+}
 
     /* =========================
        ABOUT SECTION
