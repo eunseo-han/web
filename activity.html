@@ -243,12 +243,12 @@
 
 .scholarship-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
+  grid-template-columns: max-content max-content;
+  column-gap: 35px;
 
   margin-top: 12px;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
@@ -256,6 +256,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.scholarship-group > div {
+  white-space: nowrap;
 }
 
 .scholarship-group em {
