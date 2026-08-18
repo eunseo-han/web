@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Projects | Eun-Seo Han</title>
 
- <!-- 브라우저 탭 아이콘 (Favicon) 추가 -->
+  <!-- Favicon -->
   <link rel="icon" href="images/logo.png" type="image/png">
-  
+
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <!-- Pretendard Font -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link
+    rel="stylesheet"
+    as="style"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+  >
+
 
   <style>
+
     /* =========================
-       CSS VARIABLES (공통)
+       BASIC
     ========================= */
+
     :root {
       --primary-color: #2563eb;
       --primary-hover: #1d4ed8;
@@ -28,110 +42,648 @@
       --border-color: #e2e8f0;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
 
     body {
-      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family:
+        'Pretendard',
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
       color: var(--text-main);
       background: var(--bg-color);
+
       line-height: 1.6;
+
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; text-decoration: none; transition: all 0.2s ease-in-out; }
 
-    /* NAVIGATION */
-    nav {
-      position: sticky; top: 0; background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 1000;
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      transition: all 0.2s ease-in-out;
     }
-    .nav-container { max-width: 1100px; margin: 0 auto; padding: 16px 25px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-name { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
-    .nav-right { display: flex; align-items: center; gap: 35px; }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); }
-    .nav-links a:hover, .nav-links .active { color: var(--primary-color); }
-    .social-icons { display: flex; gap: 18px; }
-    .social-icons a { font-size: 1.1rem; color: var(--text-muted); }
-    .social-icons a:hover { color: var(--primary-color); transform: translateY(-2px); }
+
+
 
     /* =========================
-       PAGE CONTENT (서브페이지 전용)
+       NAVIGATION
     ========================= */
-    .page-container { max-width: 900px; margin: 80px auto; padding: 0 25px; min-height: 60vh; }
-    .page-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 50px; }
 
-    /* LIST STYLE */
-    .list-item {
-      padding-bottom: 30px;
-      margin-bottom: 30px;
+    nav {
+      position: sticky;
+      top: 0;
+
+      background: rgba(255, 255, 255, 0.9);
+
+      backdrop-filter: blur(8px);
+
+      border-bottom: 1px solid var(--border-color);
+
+      z-index: 1000;
+    }
+
+
+    .nav-container {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding: 12px 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    .nav-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+
+      letter-spacing: -0.02em;
+    }
+
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+
+      gap: 30px;
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      gap: 24px;
+    }
+
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      color: var(--text-muted);
+    }
+
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--primary-color);
+    }
+
+
+
+    /* =========================
+       SOCIAL ICONS
+    ========================= */
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+
+      gap: 16px;
+    }
+
+
+    .social-icons a {
+      font-size: 1.05rem;
+
+      color: var(--text-muted);
+    }
+
+
+    .social-icons a:hover {
+      color: var(--primary-color);
+
+      transform: translateY(-2px);
+    }
+
+
+
+    /* CV ICON */
+
+    .cv-link {
+      width: 17.6px;
+      height: 17.6px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--text-muted);
+
+      color: white !important;
+
+      border-radius: 3px;
+
+      font-size: 10px !important;
+      font-weight: 800;
+
+      line-height: 1;
+
+      transform: translateY(1px);
+    }
+
+
+    .cv-link:hover {
+      background: var(--primary-color);
+
+      color: white !important;
+
+      transform: translateY(-1px);
+    }
+
+
+
+    /* =========================
+       PAGE
+    ========================= */
+
+    .page-container {
+      max-width: 1000px;
+
+      margin: 60px auto 80px;
+
+      padding: 0 25px;
+
+      min-height: 60vh;
+    }
+
+
+    .page-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+
+      letter-spacing: -0.03em;
+
+      margin-bottom: 55px;
+    }
+
+
+
+    /* =========================
+       PROJECT
+    ========================= */
+
+    .project-item {
+      display: grid;
+
+      grid-template-columns: 330px 1fr;
+
+      gap: 40px;
+
+      align-items: center;
+
+      padding-bottom: 45px;
+
+      margin-bottom: 45px;
+
       border-bottom: 1px solid var(--border-color);
     }
-    .list-item:last-child { border-bottom: none; }
-    
-    .item-date { color: var(--primary-color); font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .item-title { font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; line-height: 1.4; }
-    .item-role { font-size: 1rem; font-weight: 500; color: var(--text-muted); margin-bottom: 12px; }
-    .item-desc { font-size: 0.95rem; color: var(--text-main); line-height: 1.7; }
+
+
+    .project-item:last-child {
+      border-bottom: none;
+    }
+
+
+
+    /* =========================
+       PROJECT IMAGE
+    ========================= */
+
+    .project-image-box {
+      width: 100%;
+      height: 230px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--bg-light);
+
+      border: 1px solid var(--border-color);
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      padding: 12px;
+    }
+
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      transition: transform 0.25s ease;
+    }
+
+
+    .project-item:hover .project-image {
+      transform: scale(1.02);
+    }
+
+
+
+    /* =========================
+       PROJECT CONTENT
+    ========================= */
+
+    .project-content {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+
+    .item-date {
+      color: var(--primary-color);
+
+      font-size: 0.85rem;
+      font-weight: 700;
+
+      margin-bottom: 8px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+    }
+
+
+    .item-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+
+      color: var(--text-main);
+
+      margin-bottom: 8px;
+
+      line-height: 1.4;
+    }
+
+
+    .item-role {
+      font-size: 0.95rem;
+      font-weight: 500;
+
+      color: var(--text-muted);
+
+      margin-bottom: 12px;
+    }
+
+
+    .item-desc {
+      font-size: 0.95rem;
+
+      color: var(--text-main);
+
+      line-height: 1.7;
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .page-title { font-size: 2rem; margin-bottom: 30px; }
+
+      .nav-links {
+        display: none;
+      }
+
+
+      .page-container {
+        margin-top: 40px;
+      }
+
+
+      .page-title {
+        font-size: 2.2rem;
+
+        margin-bottom: 35px;
+      }
+
+
+      .project-item {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding-bottom: 35px;
+
+        margin-bottom: 35px;
+      }
+
+
+      .project-image-box {
+        height: 240px;
+      }
+
     }
+
+
   </style>
+
 </head>
+
+
+
 <body>
 
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <nav>
+
     <div class="nav-container">
-      <a href="index.html" class="nav-name">Eun-Seo Han</a>
+
+
+      <a
+        href="index.html"
+        class="nav-name"
+      >
+        Eun-Seo Han
+      </a>
+
+
       <div class="nav-right">
+
+
+        <!-- MENU -->
+
         <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="publications.html">Publications</a>
-          <a href="projects.html" class="active">Projects</a>
-          <a href="activity.html">Activity</a>
+
+          <a href="index.html">
+            About
+          </a>
+
+          <a href="publications.html">
+            Publications
+          </a>
+
+          <a
+            href="projects.html"
+            class="active"
+          >
+            Projects
+          </a>
+
+          <a href="activity.html">
+            Activity
+          </a>
+
         </div>
+
+
+
+        <!-- ICONS -->
+
         <div class="social-icons">
-          <a href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-          <a href="YOUR_LINKEDIN_URL" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="mailto:sylvia6629@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+          <!-- CV -->
+
+          <a
+            href="files/CV.pdf"
+            target="_blank"
+            title="Curriculum Vitae"
+            class="cv-link"
+          >
+            CV
+          </a>
+
+
+          <!-- Google Scholar -->
+
+          <a
+            href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko"
+            target="_blank"
+            title="Google Scholar"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+
+
+          <!-- LinkedIn -->
+
+          <a
+            href="YOUR_LINKEDIN_URL"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+
         </div>
+
       </div>
+
     </div>
+
   </nav>
 
+
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
+
   <main class="page-container">
-    <h1 class="page-title">Projects</h1>
 
-    <div class="list-item">
-      <div class="item-date">Jun 2025 – Present</div>
-      <div class="item-title">Feasibility Reassessment and Comprehensive Development Strategy for the Seoul Urban Railway Network Plan</div>
-      <div class="item-role">Researcher · The Seoul Institute</div>
-      <div class="item-desc">
-        Conducting comprehensive reassessment and strategic planning for the future urban rail network in Seoul, analyzing feasibility and transportation impacts.
+
+    <h1 class="page-title">
+      Projects
+    </h1>
+
+
+
+    <!-- =========================
+         PROJECT 1
+         SEOUL URBAN RAILWAY
+    ========================= -->
+
+    <div class="project-item">
+
+
+      <!-- IMAGE -->
+
+      <div class="project-image-box">
+
+        <img
+          src="images/project_seoul_rail.jpg"
+          alt="Seoul Urban Railway Network Plan"
+          class="project-image"
+        >
+
       </div>
+
+
+
+      <!-- CONTENT -->
+
+      <div class="project-content">
+
+
+        <div class="item-date">
+          Jun 2025 – Present
+        </div>
+
+
+        <div class="item-title">
+          Feasibility Reassessment and Comprehensive Development Strategy for the Seoul Urban Railway Network Plan
+        </div>
+
+
+        <div class="item-role">
+          Researcher · The Seoul Institute
+        </div>
+
+
+        <div class="item-desc">
+          Conducting comprehensive reassessment and strategic planning
+          for the future urban rail network in Seoul, analyzing
+          feasibility and transportation impacts.
+        </div>
+
+
+      </div>
+
     </div>
 
-    <div class="list-item">
-      <div class="item-date">Jan 2025 – Jun 2025</div>
-      <div class="item-title">Sustainable Urban Transport System for Carbon Neutrality in Bishkek, Kyrgyzstan</div>
-      <div class="item-role">Researcher · Funded by KOICA</div>
-      <div class="item-desc">
-        Contributed to developing sustainable urban transport solutions aimed at achieving carbon neutrality and improving public transit infrastructure in Bishkek.
+
+
+    <!-- =========================
+         PROJECT 2
+         BISHKEK
+    ========================= -->
+
+    <div class="project-item">
+
+
+      <!-- IMAGE -->
+
+      <div class="project-image-box">
+
+        <img
+          src="images/project_bishkek.jpg"
+          alt="Sustainable Urban Transport System in Bishkek"
+          class="project-image"
+        >
+
       </div>
+
+
+
+      <!-- CONTENT -->
+
+      <div class="project-content">
+
+
+        <div class="item-date">
+          Jan 2025 – Jun 2025
+        </div>
+
+
+        <div class="item-title">
+          Sustainable Urban Transport System for Carbon Neutrality in Bishkek, Kyrgyzstan
+        </div>
+
+
+        <div class="item-role">
+          Researcher · Funded by KOICA
+        </div>
+
+
+        <div class="item-desc">
+          Contributed to developing sustainable urban transport
+          solutions aimed at achieving carbon neutrality and improving
+          public transit infrastructure in Bishkek.
+        </div>
+
+
+      </div>
+
     </div>
 
-    <div class="list-item">
-      <div class="item-date">Jun 2022 – Dec 2024</div>
-      <div class="item-title">Korea Highway Capacity Manual (KHCM) Revision</div>
-      <div class="item-role">Researcher · Smart Transportation Laboratory, Myongji University</div>
-      <div class="item-desc">
-        Participated in the revision process of the Korea Highway Capacity Manual, focusing on updating guidelines and capacity analysis methodologies.
+
+
+    <!-- =========================
+         PROJECT 3
+         KHCM
+    ========================= -->
+
+    <div class="project-item">
+
+
+      <!-- IMAGE -->
+
+      <div class="project-image-box">
+
+        <img
+          src="images/project_khcm.jpg"
+          alt="Korea Highway Capacity Manual Revision"
+          class="project-image"
+        >
+
       </div>
+
+
+
+      <!-- CONTENT -->
+
+      <div class="project-content">
+
+
+        <div class="item-date">
+          Jun 2022 – Dec 2024
+        </div>
+
+
+        <div class="item-title">
+          Korea Highway Capacity Manual (KHCM) Revision
+        </div>
+
+
+        <div class="item-role">
+          Researcher · Smart Transportation Laboratory, Myongji University
+        </div>
+
+
+        <div class="item-desc">
+          Participated in the revision process of the Korea Highway
+          Capacity Manual, focusing on updating guidelines and capacity
+          analysis methodologies.
+        </div>
+
+
+      </div>
+
     </div>
+
 
   </main>
 
+
 </body>
+
 </html>
