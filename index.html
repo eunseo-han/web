@@ -113,6 +113,12 @@
       transform: translateY(-2px); /* 마우스 호버 시 살짝 위로 올라가는 효과 */
     }
 
+    .cv-link {
+  font-size: 0.9rem !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+    }
+
     /* =========================
        ABOUT SECTION
     ========================= */
@@ -322,33 +328,57 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-name">Eun-Seo Han</a>
-      <div class="nav-right">
-        <!-- MENU -->
-        <div class="nav-links">
-          <a href="index.html" class="active">About</a>
-          <a href="publications.html">Publications</a>
-          <a href="projects.html">Projects</a>
-          <a href="activity.html">Activity</a>
-        </div>
-        <!-- ICONS -->
-        <div class="social-icons">
-          <a href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko" target="_blank" title="Google Scholar">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </a>
-          <a href="YOUR_LINKEDIN_URL" target="_blank" title="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="mailto:sylvia6629@gmail.com" title="Email">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </div>
+ <!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-name">Eun-Seo Han</a>
+
+    <div class="nav-right">
+
+      <!-- MENU -->
+      <div class="nav-links">
+        <a href="index.html" class="active">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="activity.html">Activity</a>
       </div>
+
+      <!-- ICONS -->
+      <div class="social-icons">
+
+        <!-- CV -->
+        <a
+          href="files/CV.pdf"
+          target="_blank"
+          title="Curriculum Vitae"
+          class="cv-link"
+        >
+          CV
+        </a>
+
+        <!-- Google Scholar -->
+        <a
+          href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko"
+          target="_blank"
+          title="Google Scholar"
+        >
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="YOUR_LINKEDIN_URL"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+      </div>
+
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- ABOUT -->
   <main class="about">
