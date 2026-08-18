@@ -232,8 +232,43 @@
       font-size: 0.95rem;
       color: var(--text-muted);
     }
+    
+    /* =========================
+   SCHOLARSHIP DETAILS
+========================= */
 
+.scholarship-desc {
+  flex: 1;
+}
 
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+
+  margin-top: 12px;
+
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.scholarship-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scholarship-group em {
+  color: var(--text-main);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .scholarship-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
     /* =========================
        MOBILE
     ========================= */
@@ -406,13 +441,62 @@
         </div>
       </div>
 
-      <div class="activity-item">
-        <div class="activity-date">Aug. 2021 – Aug. 2024</div>
-        <div class="activity-desc">
-          <span class="activity-highlight">Merit-based Scholarships (6 semesters)</span>
-          Myongji University
+     <div class="activity-item scholarship-item">
+
+  <div class="activity-date">
+    Aug. 2021 – Aug. 2024
+  </div>
+
+  <div class="activity-desc scholarship-desc">
+
+    <span class="activity-highlight">
+      Merit-based Scholarship, <em>Myongji University</em>
+    </span>
+
+    <div class="scholarship-grid">
+
+      <!-- Graduate School -->
+      <div class="scholarship-group">
+        <div>
+          Graduate School,
+          <em>Third Semester (Aug. 2024)</em>
+        </div>
+
+        <div>
+          Graduate School,
+          <em>Second Semester (Feb. 2024)</em>
+        </div>
+
+        <div>
+          Graduate School,
+          <em>First Semester (Aug. 2023)</em>
         </div>
       </div>
+
+
+      <!-- Undergraduate School -->
+      <div class="scholarship-group">
+        <div>
+          Undergraduate School,
+          <em>Seventh Semester (Feb. 2023)</em>
+        </div>
+
+        <div>
+          Undergraduate School,
+          <em>Sixth Semester (Aug. 2022)</em>
+        </div>
+
+        <div>
+          Undergraduate School,
+          <em>Fourth Semester (Aug. 2021)</em>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
       <div class="activity-item">
         <div class="activity-date">Feb. 2022</div>
