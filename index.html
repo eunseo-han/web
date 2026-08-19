@@ -6,22 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eun-Seo Han</title>
 
-  <!-- 브라우저 탭 아이콘 (Favicon) 추가 -->
+  <!-- 브라우저 탭 아이콘 (Favicon) -->
   <link rel="icon" href="images/logo.png" type="image/png">
-
-  <!-- 기존 폰트 및 CSS 링크들... -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
+
   <!-- Pretendard Font -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
   <style>
     /* =========================
-       CSS VARIABLES (컬러 팔레트)
+       CSS VARIABLES
     ========================= */
     :root {
       --primary-color: #2563eb;
@@ -46,7 +43,7 @@
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--text-main);
       background: var(--bg-color);
-      line-height: 1.5; /* 전체 줄 간격 살짝 축소 */
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -71,7 +68,7 @@
     .nav-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 12px 25px; /* 네비게이션 여백 축소 */
+      padding: 12px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -95,7 +92,7 @@
     }
 
     .nav-links a {
-      font-size: 0.9rem; /* 메뉴 글자 크기 살짝 축소 */
+      font-size: 0.9rem;
       font-weight: 500;
       color: var(--text-muted);
     }
@@ -149,27 +146,27 @@
     .about {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 50px 25px; /* 위아래 여백 대폭 축소 (기존 100px -> 50px) */
+      padding: 50px 25px;
     }
 
     .about-container {
       display: grid;
-      grid-template-columns: 2.2fr 1fr; /* 텍스트 공간을 살짝 더 넓게 확보 */
-      gap: 40px; /* 좌우 간격 축소 */
+      grid-template-columns: 2.2fr 1fr;
+      gap: 40px;
       align-items: center;
     }
 
     .intro-label {
       color: var(--primary-color);
-      font-size: 0.75rem; /* 라벨 크기 축소 */
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 8px; /* 여백 축소 */
+      margin-bottom: 8px;
     }
 
     .about h1 {
-      font-size: 2.8rem; /* 이름 크기 축소 (기존 3.5rem -> 2.8rem) */
+      font-size: 2.8rem;
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 5px;
@@ -177,27 +174,55 @@
     }
 
     .about-subtitle {
-      font-size: 1.05rem; /* 서브타이틀 크기 축소 */
+      font-size: 1.05rem;
       font-weight: 500;
       color: var(--text-muted);
-      margin-bottom: 20px; /* 여백 축소 */
+      margin-bottom: 20px;
     }
 
     .about-description {
-      font-size: 0.95rem; /* 본문 폰트 사이즈 축소 */
+      font-size: 0.95rem;
       color: var(--text-main);
-      line-height: 1.6; /* 줄 간격 압축 */
+      line-height: 1.6;
       max-width: 700px;
-      margin-bottom: 25px; /* 문단 아래 여백 축소 */
+      margin-bottom: 20px;
     }
 
     .about-description p {
-      margin-bottom: 12px; /* 문단 사이 여백 축소 */
+      margin-bottom: 12px;
     }
 
-    /* RESEARCH INTERESTS */
+    /* =========================
+       CONTACT
+    ========================= */
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info i {
+      color: var(--primary-color);
+      font-size: 0.95rem;
+    }
+
+    .contact-info a {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary-color);
+    }
+
+    /* =========================
+       RESEARCH INTERESTS
+    ========================= */
     .research-title {
-      font-size: 0.9rem; /* 제목 축소 */
+      font-size: 0.9rem;
       font-weight: 600;
       margin-bottom: 10px;
       color: var(--text-main);
@@ -212,9 +237,9 @@
     .research-interests span {
       background: var(--bg-light);
       border: 1px solid var(--border-color);
-      padding: 5px 12px; /* 태그 내부 여백 축소 */
+      padding: 5px 12px;
       border-radius: 30px;
-      font-size: 0.8rem; /* 태그 글씨 축소 */
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-muted);
       cursor: default;
@@ -228,7 +253,9 @@
       transform: translateY(-2px);
     }
 
-    /* PROFILE IMAGE */
+    /* =========================
+       PROFILE IMAGE
+    ========================= */
     .profile-image-container {
       display: flex;
       justify-content: flex-end;
@@ -236,9 +263,11 @@
 
     .profile-image {
       width: 100%;
-      max-width: 240px; /* 사진 크기 축소 (기존 300px -> 240px) */
+      max-width: 240px;
       border-radius: 12px;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
 
@@ -250,13 +279,13 @@
        EDUCATION / EXPERIENCE
     ========================= */
     .info-section {
-      margin-top: 50px; /* 위 여백 대폭 축소 */
+      margin-top: 50px;
       padding-top: 40px;
       border-top: 1px solid var(--border-color);
     }
 
     .info-section h2 {
-      font-size: 1.4rem; /* 제목 축소 */
+      font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 25px;
       letter-spacing: -0.02em;
@@ -264,10 +293,10 @@
 
     .info-item {
       display: grid;
-      grid-template-columns: 160px 1fr; /* 좌측 날짜 영역 너비 축소 */
+      grid-template-columns: 160px 1fr;
       gap: 15px;
-      margin-bottom: 15px; /* 박스 사이 간격 축소 */
-      padding: 15px; /* 박스 내부 여백 축소 */
+      margin-bottom: 15px;
+      padding: 15px;
       border-radius: 8px;
       transition: background 0.2s;
     }
@@ -278,13 +307,13 @@
 
     .info-date {
       color: var(--text-muted);
-      font-size: 0.85rem; /* 글씨 축소 */
+      font-size: 0.85rem;
       font-weight: 500;
       padding-top: 2px;
     }
 
     .info-title {
-      font-size: 1rem; /* 직책 글씨 축소 */
+      font-size: 1rem;
       font-weight: 600;
       color: var(--text-main);
       margin-bottom: 4px;
@@ -292,7 +321,7 @@
 
     .info-description {
       color: var(--text-muted);
-      font-size: 0.85rem; /* 소속 글씨 축소 */
+      font-size: 0.85rem;
       line-height: 1.5;
     }
 
@@ -300,10 +329,11 @@
        MOBILE RESPONSIVENESS
     ========================= */
     @media (max-width: 768px) {
+
       .nav-links {
         display: none;
       }
-      
+
       .about-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -331,6 +361,10 @@
         margin: 0 auto 20px;
       }
 
+      .contact-info {
+        justify-content: center;
+      }
+
       .research-interests {
         justify-content: center;
       }
@@ -354,9 +388,11 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-container">
+
       <a href="index.html" class="nav-name">Eun-Seo Han</a>
 
       <div class="nav-right">
+
         <!-- MENU -->
         <div class="nav-links">
           <a href="index.html" class="active">About</a>
@@ -367,43 +403,100 @@
 
         <!-- ICONS -->
         <div class="social-icons">
+
           <!-- CV -->
-          <a href="files/CV.pdf" target="_blank" title="Curriculum Vitae" class="cv-link">CV</a>
+          <a href="files/CV.pdf"
+             target="_blank"
+             title="Curriculum Vitae"
+             class="cv-link">
+            CV
+          </a>
+
           <!-- Google Scholar -->
-          <a href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko" target="_blank" title="Google Scholar">
+          <a href="https://scholar.google.co.kr/citations?user=L_3fus4AAAAJ&hl=ko"
+             target="_blank"
+             title="Google Scholar">
             <i class="fa-solid fa-graduation-cap"></i>
           </a>
+
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/eunseo-han-5976222b8/" target="_blank" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/eunseo-han-5976222b8/"
+             target="_blank"
+             title="LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
           </a>
+
         </div>
       </div>
     </div>
   </nav>
 
+
   <!-- ABOUT -->
   <main class="about">
+
     <div class="about-container">
+
       <!-- LEFT -->
       <div>
-        <div class="intro-label">Transportation Researcher</div>
-        <h1>Eun-Seo Han</h1>
-                
-        <div class="about-description">
-          <p>
-            I am currently a Researcher at The Seoul Institute. I completed an integrated B.Eng.–M.Eng. program in Transportation Engineering at <a href="https://www.stlab-mju.com/" target="_blank" style="text-decoration: underline; font-weight: 600;">Myongji University</a> advised by <a href="https://scholar.google.co.kr/citations?hl=ko&user=IL4-7HwAAAAJ" target="_blank" style="text-decoration: underline; font-weight: 600;">Prof. Ho-Chul Park</a>. 
-            My research began with public transportation and multimodal mobility and has since developed into a broader interest in how transportation systems and infrastructure can be planned and evaluated to better respond to people’s mobility needs.
-          </p>          
-          <p>
-            My research focuses on understanding how transportation investments translate into changes in people’s mobility and whether those changes meaningfully address existing mobility problems. 
-            I am particularly interested in connecting travel behavior with transport planning and investment appraisal—examining not only where and what to invest in, but also how people respond to new transportation options and who is able to benefit from them. 
-            Ultimately, I aim to develop data-driven and context-sensitive approaches that bridge human mobility behavior with real-world investment decisions, helping identify transportation interventions that create meaningful and lasting mobility impacts.
-          </p>
+
+        <div class="intro-label">
+          Transportation Researcher
         </div>
 
+        <h1>Eun-Seo Han</h1>
+
+        <div class="about-description">
+
+          <p>
+            I am currently a Researcher at The Seoul Institute. I completed an integrated
+            B.Eng.–M.Eng. program in Transportation Engineering at
+            <a href="https://www.stlab-mju.com/"
+               target="_blank"
+               style="text-decoration: underline; font-weight: 600;">
+              Myongji University
+            </a>,
+            advised by
+            <a href="https://scholar.google.co.kr/citations?hl=ko&user=IL4-7HwAAAAJ"
+               target="_blank"
+               style="text-decoration: underline; font-weight: 600;">
+              Prof. Ho-Chul Park
+            </a>.
+            My research began with public transportation and multimodal mobility and has
+            since developed into a broader interest in how transportation systems and
+            infrastructure can be planned and evaluated to better respond to people’s
+            mobility needs.
+          </p>
+
+          <p>
+            My research focuses on understanding how transportation investments translate
+            into changes in people’s mobility and whether those changes meaningfully address
+            existing mobility problems. I am particularly interested in connecting travel
+            behavior with transport planning and investment appraisal—examining not only
+            where and what to invest in, but also how people respond to new transportation
+            options and who is able to benefit from them. Ultimately, I aim to develop
+            data-driven and context-sensitive approaches that bridge human mobility behavior
+            with real-world investment decisions, helping identify transportation
+            interventions that create meaningful and lasting mobility impacts.
+          </p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="contact-info">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:sylvia6629@gmail.com">
+            sylvia6629@gmail.com
+          </a>
+        </div>
+
+
         <!-- RESEARCH INTERESTS -->
-        <h3 class="research-title">Research Interests</h3>
+        <h3 class="research-title">
+          Research Interests
+        </h3>
+
         <div class="research-interests">
           <span>Transportation System & Operations</span>
           <span>Multimodal Mobility</span>
@@ -413,56 +506,107 @@
           <span>Service Performance Evaluation</span>
           <span>Transfer & Connectivity Analysis</span>
         </div>
+
       </div>
+
 
       <!-- RIGHT / PROFILE -->
       <div class="profile-image-container">
-        <img src="images/profile2.jpg" alt="Eun-Seo Han" class="profile-image">
+        <img src="images/profile2.jpg"
+             alt="Eun-Seo Han"
+             class="profile-image">
       </div>
+
     </div>
+
 
     <!-- EXPERIENCE -->
     <div class="info-section">
+
       <h2>Experience</h2>
-      
+
       <div class="info-item">
-        <div class="info-date">Jan. 2025 – Present</div>
+        <div class="info-date">
+          Jan. 2025 – Present
+        </div>
+
         <div>
-          <div class="info-title">Researcher · The Seoul Institute</div>
-          <div class="info-description">Smart Transportation Research Division</div>
+          <div class="info-title">
+            Researcher · The Seoul Institute
+          </div>
+
+          <div class="info-description">
+            Smart Transportation Research Division
+          </div>
         </div>
       </div>
 
+
       <div class="info-item">
-        <div class="info-date">Mar. 2022 – Dec. 2024</div>
-        <div>
-          <div class="info-title">Researcher · Myongji University</div>
-          <div class="info-description">Smart Transportation Lab</div>
+
+        <div class="info-date">
+          Mar. 2022 – Dec. 2024
         </div>
+
+        <div>
+          <div class="info-title">
+            Researcher · Myongji University
+          </div>
+
+          <div class="info-description">
+            Smart Transportation Lab
+          </div>
+        </div>
+
       </div>
+
     </div>
+
 
     <!-- EDUCATION -->
     <div class="info-section">
+
       <h2>Education</h2>
-      
-      <div class="info-item">
-        <div class="info-date">Sept. 2023 – Feb. 2025</div>
-        <div>
-          <div class="info-title">M.S. in Transportation Engineering</div>
-          <div class="info-description">Myongji University</div>
-        </div>
-      </div>
 
       <div class="info-item">
-        <div class="info-date">Mar. 2020 – Aug. 2023</div>
-        <div>
-          <div class="info-title">B.S. in Transportation Engineering</div>
-          <div class="info-description">Myongji University</div>
+
+        <div class="info-date">
+          Sept. 2023 – Feb. 2025
         </div>
+
+        <div>
+          <div class="info-title">
+            M.S. in Transportation Engineering
+          </div>
+
+          <div class="info-description">
+            Myongji University
+          </div>
+        </div>
+
       </div>
-      
+
+
+      <div class="info-item">
+
+        <div class="info-date">
+          Mar. 2020 – Aug. 2023
+        </div>
+
+        <div>
+          <div class="info-title">
+            B.S. in Transportation Engineering
+          </div>
+
+          <div class="info-description">
+            Myongji University
+          </div>
+        </div>
+
+      </div>
+
     </div>
+
   </main>
 
 </body>
